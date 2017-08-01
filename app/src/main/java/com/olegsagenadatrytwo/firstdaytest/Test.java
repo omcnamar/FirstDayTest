@@ -1,6 +1,9 @@
 package com.olegsagenadatrytwo.firstdaytest;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Created by omcna on 8/1/2017.
@@ -44,16 +47,20 @@ public class Test {
 
     public static void printDuplicate(ArrayList<String> myArray){
 
+        Set<String> uniq = new HashSet<String>();
         for (int i = 0; i < myArray.size(); i++){
             for(int j = 0; j < myArray.size(); j++){
                 if(j != i) {
                     if (myArray.get(i) == myArray.get(j)) {
-                        //not completely right yet spend all my time on frozen computer
-                        System.out.println(myArray.get(i));
+                        uniq.add(myArray.get(i));
                     }
                 }
             }
 
+        }
+        Iterator<String> itr = uniq.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
         }
     }
 }
