@@ -46,9 +46,11 @@ public class Test {
 
         for (int i = 0; i < myArray.size(); i++){
             for(int j = 0; j < myArray.size(); j++){
-                if(myArray.get(i) == myArray.get(j)){
-                    //not right yet spend all my time on frozen computer 
-                    System.out.println(myArray.get(i));
+                if(j != i) {
+                    if (myArray.get(i) == myArray.get(j)) {
+                        //not completely right yet spend all my time on frozen computer
+                        System.out.println(myArray.get(i));
+                    }
                 }
             }
 
